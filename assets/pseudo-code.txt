@@ -1,0 +1,88 @@
+Watch the demo.
+Choose a theme for your game! In the demo, we picked an 80s theme: 80s questions, 80s sound and an 80s aesthetic. You can choose any subject for your theme, though, so be creative!
+Use key events to listen for the letters that your players will type.
+Display the following on the page:
+Press any key to get started!
+Wins: (# of times user guessed the word correctly).
+
+
+
+If the word is madonna, display it like this when the game starts: _ _ _ _ _ _ _.
+As the user guesses the correct letters, reveal them: m a d o _  _ a.
+
+
+
+Number of Guesses Remaining: (# of guesses remaining for the user).
+Letters Already Guessed: (Letters the user has guessed, displayed like L Z Y H).
+After the user wins/loses the game should automatically choose another word and make the user play it.
+
+
+
+Word Guess Game Bonuses
+
+
+Play a sound or song when the user guesses their word correctly, like in our demo.
+Write some stylish CSS rules to make a design that fits your game's theme.
+
+HARD MODE: Organize your game code as an object, except for the key events to get the letter guessed. This will be a challenge if you haven't coded with JavaScript before, but we encourage anyone already familiar with the language to try this out.
+Save your whole game and its properties in an object.
+Save any of your game's functions as methods, and call them underneath your object declaration using event listeners.
+Don't forget to place your global variables and functions above your object.
+
+
+Remember: global variables, then objects, then calls.
+
+
+Definitely talk with a TA or your instructor if you get tripped up during this challenge.
+
+
+
+
+------------------------------
+
+Objectives: 
+
+-Choose a theme (???)
+
+-In script,
+
+   Assign baseline variables
+    -wins counter = 0
+
+
+   Populate a list of 5-10 words to be guessed based on theme. (Array? Array in an array?)
+    -at each play, generate the empty fields to be shown based on length of word to guessed
+    -each empty field should be assigned value of the corresponding letter so we can compare later
+    -
+
+-Set up HTML to display a few things:
+    -Themed title
+    -Start prompt
+    -Win counter
+    -Responsive empty fields for letters
+    -Guesses left counter
+    -populating list of guessed letters
+
+-Set up script to recognize key pressed by user
+-Save key pressed by user as a variable
+-compare key pressed variable to value of empty field for word to be guessed
+    -if correct, 
+        -display letter in that empty field with matching value
+        -leave guessesleft counter the same
+    -if incorrect,
+        -display letter under guessed letters field at bottom
+        -minus 1 from guesses left counter 
+
+
+
+-Plan of attack : 
+Establish some variables and make our array of words to guess.
+Make a div for basic display to start off, inside that div we will show the empty lines using strings of "__" or "_" depending on how it looks. We could use a loop set to the .length of the chosen word to 
+we can also set up the connection to the html with another div or p tag where  we can show show the guessed letters
+we can console log some things to track progress as we code up, like what word is guessed, 
+
+
+WhiteBoarding: 
+
+We could make blanks using loop with .length of target word... but if we do this how does code know what value is assigned to each blank? We could maybe make the blanks exist, with values assigned in the html but are not displayed...? I think it would be hard to make the loop unhide or add display property... we could just use a static letter count value, like the example seems to. Maybe 6 letter words only so that each blank is a static html element with a value attached, so no loop is needed, and when each round of play starts it assigns the index of the word to guess array to each value of the blanks. Feels like a copout, and with the psychic game already done I should aim for more. May wind up doing the upcoming jQuery assignment first to get that out of the way then circle back to do this one while tryign to work out challenges like this value assignment issue if varying length words are used. 
+        Also, how to target values on elements without using .val from jQuery?? will have to google.
